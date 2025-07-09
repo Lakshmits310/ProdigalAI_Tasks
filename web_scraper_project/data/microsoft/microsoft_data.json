@@ -1,0 +1,282 @@
+[
+  {
+    "source": "Microsoft Research Blog",
+    "title": "PadChest-GR: A bilingual grounded radiology reporting benchmark for chest X-rays",
+    "link": "https://www.microsoft.com/en-us/research/blog/padchest-gr-a-bilingual-grounded-radiology-reporting-benchmark-for-chest-x-rays/",
+    "description": "",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "PadChest-GR: A bilingual grounded radiology reporting benchmark for chest X-rays",
+    "link": "https://www.microsoft.com/en-us/research/blog/padchest-gr-a-bilingual-grounded-radiology-reporting-benchmark-for-chest-x-rays/",
+    "description": "",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Recent Posts",
+    "link": null,
+    "description": "",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "PadChest-GR: A bilingual grounded radiology reporting benchmark for chest X-rays",
+    "link": "https://www.microsoft.com/en-us/research/blog/padchest-gr-a-bilingual-grounded-radiology-reporting-benchmark-for-chest-x-rays/",
+    "description": "The world’s first multimodal, bilingual radiology dataset could reshape the way radiologists and AI systems make sense of X-rays. PadChest-GR, developed by the University of Alicante with Microsoft Research, has the potential to advance research across the field for years to come.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "PadChest-GR: A bilingual grounded radiology reporting benchmark for chest X-rays",
+    "link": "https://www.microsoft.com/en-us/research/blog/padchest-gr-a-bilingual-grounded-radiology-reporting-benchmark-for-chest-x-rays/",
+    "description": "The world’s first multimodal, bilingual radiology dataset could reshape the way radiologists and AI systems make sense of X-rays. PadChest-GR, developed by the University of Alicante with Microsoft Research, has the potential to advance research across the field for years to come.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Learning from other domains to advance AI evaluation and testing",
+    "link": "https://www.microsoft.com/en-us/research/blog/learning-from-other-domains-to-advance-ai-evaluation-and-testing/",
+    "description": "As generative AI becomes more capable and widely deployed, familiar questions from the governance of other transformative technologies have resurfaced. Which opportunities, capabilities, risks, and impacts should be evaluated? Who should conduct evaluations, and at what stages of the technology lifecycle? What tests or measurements…",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Learning from other domains to advance AI evaluation and testing",
+    "link": "https://www.microsoft.com/en-us/research/blog/learning-from-other-domains-to-advance-ai-evaluation-and-testing/",
+    "description": "As generative AI becomes more capable and widely deployed, familiar questions from the governance of other transformative technologies have resurfaced. Which opportunities, capabilities, risks, and impacts should be evaluated? Who should conduct evaluations, and at what stages of the technology lifecycle? What tests or measurements…",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Breaking bonds, breaking ground: Advancing the accuracy of computational chemistry with deep learning",
+    "link": "https://www.microsoft.com/en-us/research/blog/breaking-bonds-breaking-ground-advancing-the-accuracy-of-computational-chemistry-with-deep-learning/",
+    "description": "Microsoft researchers achieved a breakthrough in the accuracy of DFT, a method for predicting the properties of molecules and materials, by using deep learning. This work can lead to better batteries, green fertilizers, precision drug discovery, and more.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Breaking bonds, breaking ground: Advancing the accuracy of computational chemistry with deep learning",
+    "link": "https://www.microsoft.com/en-us/research/blog/breaking-bonds-breaking-ground-advancing-the-accuracy-of-computational-chemistry-with-deep-learning/",
+    "description": "Microsoft researchers achieved a breakthrough in the accuracy of DFT, a method for predicting the properties of molecules and materials, by using deep learning. This work can lead to better batteries, green fertilizers, precision drug discovery, and more.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "New methods boost reasoning in small and large language models",
+    "link": "https://www.microsoft.com/en-us/research/blog/new-methods-boost-reasoning-in-small-and-large-language-models/",
+    "description": "New techniques are reimagining how LLMs reason. By combining symbolic logic, mathematical rigor, and adaptive planning, these methods enable models to tackle complex, real-world problems across a variety of fields.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "New methods boost reasoning in small and large language models",
+    "link": "https://www.microsoft.com/en-us/research/blog/new-methods-boost-reasoning-in-small-and-large-language-models/",
+    "description": "New techniques are reimagining how LLMs reason. By combining symbolic logic, mathematical rigor, and adaptive planning, these methods enable models to tackle complex, real-world problems across a variety of fields.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Rewriting SymCrypt in Rust to modernize Microsoft’s cryptographic library",
+    "link": "https://www.microsoft.com/en-us/research/blog/rewriting-symcrypt-in-rust-to-modernize-microsofts-cryptographic-library/",
+    "description": "We're rewriting parts of Microsoft's SymCrypt cryptographic library in Rust to improve memory safety and defend against side-channel attacks, enabling formal verification while maintaining backward compatibility via a Rust-to-C compiler.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Rewriting SymCrypt in Rust to modernize Microsoft’s cryptographic library",
+    "link": "https://www.microsoft.com/en-us/research/blog/rewriting-symcrypt-in-rust-to-modernize-microsofts-cryptographic-library/",
+    "description": "We're rewriting parts of Microsoft's SymCrypt cryptographic library in Rust to improve memory safety and defend against side-channel attacks, enabling formal verification while maintaining backward compatibility via a Rust-to-C compiler.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "BenchmarkQED: Automated benchmarking of RAG systems",
+    "link": "https://www.microsoft.com/en-us/research/blog/benchmarkqed-automated-benchmarking-of-rag-systems/",
+    "description": "BenchmarkQED is an open-source toolkit for benchmarking RAG systems using automated query generation, evaluation, and dataset prep. It shows that LazyGraphRAG outperforms standard methods, especially on complex, global queries.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "BenchmarkQED: Automated benchmarking of RAG systems",
+    "link": "https://www.microsoft.com/en-us/research/blog/benchmarkqed-automated-benchmarking-of-rag-systems/",
+    "description": "BenchmarkQED is an open-source toolkit for benchmarking RAG systems using automated query generation, evaluation, and dataset prep. It shows that LazyGraphRAG outperforms standard methods, especially on complex, global queries.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "FrodoKEM: A conservative quantum-safe cryptographic algorithm",
+    "link": "https://www.microsoft.com/en-us/research/blog/frodokem-a-conservative-quantum-safe-cryptographic-algorithm/",
+    "description": "The recent advances in quantum computing offer many advantages—but also challenge current cryptographic strategies. Learn how FrodoKEM could help strengthen security, even in a future with powerful quantum computers.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "FrodoKEM: A conservative quantum-safe cryptographic algorithm",
+    "link": "https://www.microsoft.com/en-us/research/blog/frodokem-a-conservative-quantum-safe-cryptographic-algorithm/",
+    "description": "The recent advances in quantum computing offer many advantages—but also challenge current cryptographic strategies. Learn how FrodoKEM could help strengthen security, even in a future with powerful quantum computers.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Magentic-UI, an experimental human-centered web agent",
+    "link": "https://www.microsoft.com/en-us/research/blog/magentic-ui-an-experimental-human-centered-web-agent/",
+    "description": "Magentic-UI, new from Microsoft Research, is an open-source research prototype of a human-centered AI agent, designed to work with people to complete complex, web-based tasks in real time over a web browser.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Magentic-UI, an experimental human-centered web agent",
+    "link": "https://www.microsoft.com/en-us/research/blog/magentic-ui-an-experimental-human-centered-web-agent/",
+    "description": "Magentic-UI, new from Microsoft Research, is an open-source research prototype of a human-centered AI agent, designed to work with people to complete complex, web-based tasks in real time over a web browser.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Predicting and explaining AI model performance: A new approach to evaluation",
+    "link": "https://www.microsoft.com/en-us/research/blog/predicting-and-explaining-ai-model-performance-a-new-approach-to-evaluation/",
+    "description": "ADeLe, a new evaluation method, explains what AI systems are good at—and where they’re likely to fail. By breaking tasks into ability-based requirements, it has the potential to provide a clearer way to evaluate and predict AI model performance.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Predicting and explaining AI model performance: A new approach to evaluation",
+    "link": "https://www.microsoft.com/en-us/research/blog/predicting-and-explaining-ai-model-performance-a-new-approach-to-evaluation/",
+    "description": "ADeLe, a new evaluation method, explains what AI systems are good at—and where they’re likely to fail. By breaking tasks into ability-based requirements, it has the potential to provide a clearer way to evaluate and predict AI model performance.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Research Focus: Week of May 7, 2025",
+    "link": "https://www.microsoft.com/en-us/research/blog/research-focus-week-of-may-7-2025/",
+    "description": "In this issue: New research on compound AI systems and causal verification of the Confidential Consortium Framework; release of Phi-4-reasoning; enriching tabular data with semantic structure, and more.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Research Focus: Week of May 7, 2025",
+    "link": "https://www.microsoft.com/en-us/research/blog/research-focus-week-of-may-7-2025/",
+    "description": "In this issue: New research on compound AI systems and causal verification of the Confidential Consortium Framework; release of Phi-4-reasoning; enriching tabular data with semantic structure, and more.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Microsoft Fusion Summit explores how AI can accelerate fusion research",
+    "link": "https://www.microsoft.com/en-us/research/blog/microsoft-fusion-summit-explores-how-ai-can-accelerate-fusion-research/",
+    "description": "The first Microsoft Research Fusion Summit brought together global experts to explore how AI can help unlock the potential of fusion energy. Discover how collaborations with leading institutions can help speed progress toward clean, scalable energy.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Microsoft Fusion Summit explores how AI can accelerate fusion research",
+    "link": "https://www.microsoft.com/en-us/research/blog/microsoft-fusion-summit-explores-how-ai-can-accelerate-fusion-research/",
+    "description": "The first Microsoft Research Fusion Summit brought together global experts to explore how AI can help unlock the potential of fusion energy. Discover how collaborations with leading institutions can help speed progress toward clean, scalable energy.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Societal AI: Building human-centered AI systems",
+    "link": "https://www.microsoft.com/en-us/research/blog/societal-ai-building-human-centered-ai-systems/",
+    "description": "Learn about a new white paper on Societal AI, an interdisciplinary framework for guiding AI development that reflects shared human values. It presents key research challenges and emphasizes collaboration across disciplines.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Societal AI: Building human-centered AI systems",
+    "link": "https://www.microsoft.com/en-us/research/blog/societal-ai-building-human-centered-ai-systems/",
+    "description": "Learn about a new white paper on Societal AI, an interdisciplinary framework for guiding AI development that reflects shared human values. It presents key research challenges and emphasizes collaboration across disciplines.",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Explore More",
+    "link": "https://www.microsoft.com/en-us/research/events-conferences/",
+    "description": "Meet our community of researchers, learn about exciting research topics, and grow your network",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Explore More",
+    "link": "https://www.microsoft.com/en-us/research/events-conferences/",
+    "description": "Meet our community of researchers, learn about exciting research topics, and grow your network",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Events & conferences",
+    "link": "https://www.microsoft.com/en-us/research/events-conferences/",
+    "description": "Meet our community of researchers, learn about exciting research topics, and grow your network",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Events & conferences",
+    "link": "https://www.microsoft.com/en-us/research/events-conferences/",
+    "description": "Meet our community of researchers, learn about exciting research topics, and grow your network",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Podcasts",
+    "link": "https://www.microsoft.com/en-us/research/podcast/",
+    "description": "Ongoing conversations at the cutting edge of research",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Podcasts",
+    "link": "https://www.microsoft.com/en-us/research/podcast/",
+    "description": "Ongoing conversations at the cutting edge of research",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Microsoft Research Forum",
+    "link": "https://researchforum.microsoft.com/?OCID=msr_researchforum_MCR_Blog_Landing",
+    "description": "Join us for a continuous exchange of ideas about research in the era of general AI",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  },
+  {
+    "source": "Microsoft Research Blog",
+    "title": "Microsoft Research Forum",
+    "link": "https://researchforum.microsoft.com/?OCID=msr_researchforum_MCR_Blog_Landing",
+    "description": "Join us for a continuous exchange of ideas about research in the era of general AI",
+    "date": "",
+    "scraped_at": "2025-07-09 04:45:46"
+  }
+]

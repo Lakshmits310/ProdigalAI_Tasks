@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Binance Price Tracker</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>📈 Binance Price Tracker</h1>
+
+  <button onclick="fetchLatest()">Get Latest</button>
+  <pre id="latest"></pre>
+
+  <hr>
+
+  <h3>Get Price at Specific Second</h3>
+  Symbol: <input id="symbol1" value="BTCUSDT">
+  Timestamp (ISO): <input id="ts1" value="2025-07-08T14:25:00">
+  <button onclick="fetchPriceAtSecond()">Get</button>
+  <pre id="atsecond"></pre>
+
+  <hr>
+
+  <h3>Get High/Low in Minute</h3>
+  Symbol: <input id="symbol2" value="ETHUSDT">
+  Timestamp (YYYY-MM-DDTHH:MM): <input id="ts2" value="2025-07-08T14:25">
+  <button onclick="fetchMinMax()">Get</button>
+  <pre id="minmax"></pre>
+
+  <hr>
+
+  <h3>Live Price Chart</h3>
+  <label for="symbolChart">Choose a symbol:</label>
+  <select id="symbolChart">
+    <option value="BTCUSDT">BTCUSDT</option>
+    <option value="ETHUSDT">ETHUSDT</option>
+  </select>
+  <button onclick="drawChart()">Plot</button>
+  <canvas id="priceChart" width="600" height="300"></canvas>
+
+  <script>
+    async function fetchLatest() {
+      const res = await fetch("/latest");
+      const data = await res.json();
+      document.getElementById("latest").innerText = JSON.stringify(data, null, 2);
+    }
+
+    async function fetchPriceAtSecond() {
+      const symbol = document.getElementById("symbol1").value;
+      const ts = document.getElementById("ts1").value;
+      const res = await fetch(`/price-at-second?symbol=${symbol}&timestamp=${ts}`);
+      const data = await res.json();
+      document.getElementById("atsecond").innerText = JSON.stringify(data, null, 2);
+    }
+
+    async function fetchMinMax() {
+      const symbol = document.getElementById("symbol2").value;
+      const ts = document.getElementById("ts2").value;
+      const res = await fetch(`/minmax?symbol=${symbol}&timestamp=${ts}`);
+      const data = await res.json();
+      document.getElementById("minmax").innerText = JSON.stringify(data, null, 2);
+    }
+
+    let currentChart = null;
+
+    async function drawChart() {
+      const symbol = document.getElementById("symbolChart").value;
+      const res = await fetch(`/chart-data?symbol=${symbol}`);
+      const data = await res.json();
+
+      const ctx = document.getElementById("priceChart").getContext("2d");
+
+      // Destroy old chart if exists
+      if (currentChart) currentChart.destroy();
+
+      currentChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: data.labels,
+          datasets: [{
+            label: `${symbol} Price`,
+            data: data.prices,
+            borderColor: "blue",
+            fill: false
+          }]
+        }
+      });
+    }
+  </script>
+</body>
+</html>

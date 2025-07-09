@@ -1,0 +1,362 @@
+[
+    {
+        "source": "Microsoft Research Blog",
+        "title": "PadChest-GR: A bilingual grounded radiology reporting benchmark for chest X-rays",
+        "link": "https://www.microsoft.com/en-us/research/blog/padchest-gr-a-bilingual-grounded-radiology-reporting-benchmark-for-chest-x-rays/",
+        "description": "",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "PadChest-GR: A bilingual grounded radiology reporting benchmark for chest X-rays",
+        "link": "https://www.microsoft.com/en-us/research/blog/padchest-gr-a-bilingual-grounded-radiology-reporting-benchmark-for-chest-x-rays/",
+        "description": "",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Recent Posts",
+        "link": null,
+        "description": "",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "PadChest-GR: A bilingual grounded radiology reporting benchmark for chest X-rays",
+        "link": "https://www.microsoft.com/en-us/research/blog/padchest-gr-a-bilingual-grounded-radiology-reporting-benchmark-for-chest-x-rays/",
+        "description": "The world’s first multimodal, bilingual radiology dataset could reshape the way radiologists and AI systems make sense of X-rays. PadChest-GR, developed by the University of Alicante with Microsoft Research, has the potential to advance research across the field for years to come.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "PadChest-GR: A bilingual grounded radiology reporting benchmark for chest X-rays",
+        "link": "https://www.microsoft.com/en-us/research/blog/padchest-gr-a-bilingual-grounded-radiology-reporting-benchmark-for-chest-x-rays/",
+        "description": "The world’s first multimodal, bilingual radiology dataset could reshape the way radiologists and AI systems make sense of X-rays. PadChest-GR, developed by the University of Alicante with Microsoft Research, has the potential to advance research across the field for years to come.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Learning from other domains to advance AI evaluation and testing",
+        "link": "https://www.microsoft.com/en-us/research/blog/learning-from-other-domains-to-advance-ai-evaluation-and-testing/",
+        "description": "As generative AI becomes more capable and widely deployed, familiar questions from the governance of other transformative technologies have resurfaced. Which opportunities, capabilities, risks, and impacts should be evaluated? Who should conduct evaluations, and at what stages of the technology lifecycle? What tests or measurements…",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Learning from other domains to advance AI evaluation and testing",
+        "link": "https://www.microsoft.com/en-us/research/blog/learning-from-other-domains-to-advance-ai-evaluation-and-testing/",
+        "description": "As generative AI becomes more capable and widely deployed, familiar questions from the governance of other transformative technologies have resurfaced. Which opportunities, capabilities, risks, and impacts should be evaluated? Who should conduct evaluations, and at what stages of the technology lifecycle? What tests or measurements…",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Breaking bonds, breaking ground: Advancing the accuracy of computational chemistry with deep learning",
+        "link": "https://www.microsoft.com/en-us/research/blog/breaking-bonds-breaking-ground-advancing-the-accuracy-of-computational-chemistry-with-deep-learning/",
+        "description": "Microsoft researchers achieved a breakthrough in the accuracy of DFT, a method for predicting the properties of molecules and materials, by using deep learning. This work can lead to better batteries, green fertilizers, precision drug discovery, and more.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Breaking bonds, breaking ground: Advancing the accuracy of computational chemistry with deep learning",
+        "link": "https://www.microsoft.com/en-us/research/blog/breaking-bonds-breaking-ground-advancing-the-accuracy-of-computational-chemistry-with-deep-learning/",
+        "description": "Microsoft researchers achieved a breakthrough in the accuracy of DFT, a method for predicting the properties of molecules and materials, by using deep learning. This work can lead to better batteries, green fertilizers, precision drug discovery, and more.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "New methods boost reasoning in small and large language models",
+        "link": "https://www.microsoft.com/en-us/research/blog/new-methods-boost-reasoning-in-small-and-large-language-models/",
+        "description": "New techniques are reimagining how LLMs reason. By combining symbolic logic, mathematical rigor, and adaptive planning, these methods enable models to tackle complex, real-world problems across a variety of fields.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "New methods boost reasoning in small and large language models",
+        "link": "https://www.microsoft.com/en-us/research/blog/new-methods-boost-reasoning-in-small-and-large-language-models/",
+        "description": "New techniques are reimagining how LLMs reason. By combining symbolic logic, mathematical rigor, and adaptive planning, these methods enable models to tackle complex, real-world problems across a variety of fields.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Rewriting SymCrypt in Rust to modernize Microsoft’s cryptographic library",
+        "link": "https://www.microsoft.com/en-us/research/blog/rewriting-symcrypt-in-rust-to-modernize-microsofts-cryptographic-library/",
+        "description": "We're rewriting parts of Microsoft's SymCrypt cryptographic library in Rust to improve memory safety and defend against side-channel attacks, enabling formal verification while maintaining backward compatibility via a Rust-to-C compiler.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Rewriting SymCrypt in Rust to modernize Microsoft’s cryptographic library",
+        "link": "https://www.microsoft.com/en-us/research/blog/rewriting-symcrypt-in-rust-to-modernize-microsofts-cryptographic-library/",
+        "description": "We're rewriting parts of Microsoft's SymCrypt cryptographic library in Rust to improve memory safety and defend against side-channel attacks, enabling formal verification while maintaining backward compatibility via a Rust-to-C compiler.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "BenchmarkQED: Automated benchmarking of RAG systems",
+        "link": "https://www.microsoft.com/en-us/research/blog/benchmarkqed-automated-benchmarking-of-rag-systems/",
+        "description": "BenchmarkQED is an open-source toolkit for benchmarking RAG systems using automated query generation, evaluation, and dataset prep. It shows that LazyGraphRAG outperforms standard methods, especially on complex, global queries.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "BenchmarkQED: Automated benchmarking of RAG systems",
+        "link": "https://www.microsoft.com/en-us/research/blog/benchmarkqed-automated-benchmarking-of-rag-systems/",
+        "description": "BenchmarkQED is an open-source toolkit for benchmarking RAG systems using automated query generation, evaluation, and dataset prep. It shows that LazyGraphRAG outperforms standard methods, especially on complex, global queries.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "FrodoKEM: A conservative quantum-safe cryptographic algorithm",
+        "link": "https://www.microsoft.com/en-us/research/blog/frodokem-a-conservative-quantum-safe-cryptographic-algorithm/",
+        "description": "The recent advances in quantum computing offer many advantages—but also challenge current cryptographic strategies. Learn how FrodoKEM could help strengthen security, even in a future with powerful quantum computers.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "FrodoKEM: A conservative quantum-safe cryptographic algorithm",
+        "link": "https://www.microsoft.com/en-us/research/blog/frodokem-a-conservative-quantum-safe-cryptographic-algorithm/",
+        "description": "The recent advances in quantum computing offer many advantages—but also challenge current cryptographic strategies. Learn how FrodoKEM could help strengthen security, even in a future with powerful quantum computers.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Magentic-UI, an experimental human-centered web agent",
+        "link": "https://www.microsoft.com/en-us/research/blog/magentic-ui-an-experimental-human-centered-web-agent/",
+        "description": "Magentic-UI, new from Microsoft Research, is an open-source research prototype of a human-centered AI agent, designed to work with people to complete complex, web-based tasks in real time over a web browser.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Magentic-UI, an experimental human-centered web agent",
+        "link": "https://www.microsoft.com/en-us/research/blog/magentic-ui-an-experimental-human-centered-web-agent/",
+        "description": "Magentic-UI, new from Microsoft Research, is an open-source research prototype of a human-centered AI agent, designed to work with people to complete complex, web-based tasks in real time over a web browser.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Predicting and explaining AI model performance: A new approach to evaluation",
+        "link": "https://www.microsoft.com/en-us/research/blog/predicting-and-explaining-ai-model-performance-a-new-approach-to-evaluation/",
+        "description": "ADeLe, a new evaluation method, explains what AI systems are good at—and where they’re likely to fail. By breaking tasks into ability-based requirements, it has the potential to provide a clearer way to evaluate and predict AI model performance.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Predicting and explaining AI model performance: A new approach to evaluation",
+        "link": "https://www.microsoft.com/en-us/research/blog/predicting-and-explaining-ai-model-performance-a-new-approach-to-evaluation/",
+        "description": "ADeLe, a new evaluation method, explains what AI systems are good at—and where they’re likely to fail. By breaking tasks into ability-based requirements, it has the potential to provide a clearer way to evaluate and predict AI model performance.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Research Focus: Week of May 7, 2025",
+        "link": "https://www.microsoft.com/en-us/research/blog/research-focus-week-of-may-7-2025/",
+        "description": "In this issue: New research on compound AI systems and causal verification of the Confidential Consortium Framework; release of Phi-4-reasoning; enriching tabular data with semantic structure, and more.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Research Focus: Week of May 7, 2025",
+        "link": "https://www.microsoft.com/en-us/research/blog/research-focus-week-of-may-7-2025/",
+        "description": "In this issue: New research on compound AI systems and causal verification of the Confidential Consortium Framework; release of Phi-4-reasoning; enriching tabular data with semantic structure, and more.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Microsoft Fusion Summit explores how AI can accelerate fusion research",
+        "link": "https://www.microsoft.com/en-us/research/blog/microsoft-fusion-summit-explores-how-ai-can-accelerate-fusion-research/",
+        "description": "The first Microsoft Research Fusion Summit brought together global experts to explore how AI can help unlock the potential of fusion energy. Discover how collaborations with leading institutions can help speed progress toward clean, scalable energy.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Microsoft Fusion Summit explores how AI can accelerate fusion research",
+        "link": "https://www.microsoft.com/en-us/research/blog/microsoft-fusion-summit-explores-how-ai-can-accelerate-fusion-research/",
+        "description": "The first Microsoft Research Fusion Summit brought together global experts to explore how AI can help unlock the potential of fusion energy. Discover how collaborations with leading institutions can help speed progress toward clean, scalable energy.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Societal AI: Building human-centered AI systems",
+        "link": "https://www.microsoft.com/en-us/research/blog/societal-ai-building-human-centered-ai-systems/",
+        "description": "Learn about a new white paper on Societal AI, an interdisciplinary framework for guiding AI development that reflects shared human values. It presents key research challenges and emphasizes collaboration across disciplines.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Societal AI: Building human-centered AI systems",
+        "link": "https://www.microsoft.com/en-us/research/blog/societal-ai-building-human-centered-ai-systems/",
+        "description": "Learn about a new white paper on Societal AI, an interdisciplinary framework for guiding AI development that reflects shared human values. It presents key research challenges and emphasizes collaboration across disciplines.",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Explore More",
+        "link": "https://www.microsoft.com/en-us/research/events-conferences/",
+        "description": "Meet our community of researchers, learn about exciting research topics, and grow your network",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Explore More",
+        "link": "https://www.microsoft.com/en-us/research/events-conferences/",
+        "description": "Meet our community of researchers, learn about exciting research topics, and grow your network",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Events & conferences",
+        "link": "https://www.microsoft.com/en-us/research/events-conferences/",
+        "description": "Meet our community of researchers, learn about exciting research topics, and grow your network",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Events & conferences",
+        "link": "https://www.microsoft.com/en-us/research/events-conferences/",
+        "description": "Meet our community of researchers, learn about exciting research topics, and grow your network",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Podcasts",
+        "link": "https://www.microsoft.com/en-us/research/podcast/",
+        "description": "Ongoing conversations at the cutting edge of research",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Podcasts",
+        "link": "https://www.microsoft.com/en-us/research/podcast/",
+        "description": "Ongoing conversations at the cutting edge of research",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Microsoft Research Forum",
+        "link": "https://researchforum.microsoft.com/?OCID=msr_researchforum_MCR_Blog_Landing",
+        "description": "Join us for a continuous exchange of ideas about research in the era of general AI",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "source": "Microsoft Research Blog",
+        "title": "Microsoft Research Forum",
+        "link": "https://researchforum.microsoft.com/?OCID=msr_researchforum_MCR_Blog_Landing",
+        "description": "Join us for a continuous exchange of ideas about research in the era of general AI",
+        "date": "",
+        "scraped_at": "2025-07-09 04:45:46"
+    },
+    {
+        "title": "HealthCheck-up (A.B.O.C.W.W.B)",
+        "link": "https://www.myscheme.gov.in/schemes/hc-uabocwwb",
+        "description": "Registered construction workers having continuous membership of the Board can avail an amount of ₹5,000/- once in a year for his/ her annual health checkup in any Hospital.",
+        "ministry": "Assam",
+        "scraped_at": "2025-07-09 04:45:58",
+        "source": "MyScheme Portal"
+    },
+    {
+        "title": "EmployeeHealthScheme",
+        "link": "https://www.myscheme.gov.in/schemes/ehsap",
+        "description": "The Employee Health Scheme (EHS) is a government-run health scheme in Andhra Pradesh, providing cashless treatment at network hospitals for government employees, pensioners, and their families under the Dr. YSR Aarogyasri Health care Trust.",
+        "ministry": "Andhra Pradesh",
+        "scraped_at": "2025-07-09 04:45:58",
+        "source": "MyScheme Portal"
+    },
+    {
+        "title": "TotalHealthCheck-up Scheme (GBOCWWB)",
+        "link": "https://www.myscheme.gov.in/schemes/thcsgbocwwb",
+        "description": "This scheme facilitates a complete physical examination of the construction workers, which can diagnose potential illnesses and early treatment can prevent major illnesses. Hence, major illness can be avoided and the construction worker can lead a health y life.",
+        "ministry": "Gujarat",
+        "scraped_at": "2025-07-09 04:45:58",
+        "source": "MyScheme Portal"
+    },
+    {
+        "title": "LivestockHealthand Diseases Control",
+        "link": "https://www.myscheme.gov.in/schemes/lhadc",
+        "description": "The Livestock Health and Diseases Control (LH&DC) scheme is a Centrally Sponsored Scheme (CSS) implemented by the Department of Animal Husbandry and Dairying (DAHD), Ministry of Agriculture and Farmers' Welfare, Government of India.",
+        "ministry": "Ministry of Fisheries,Animal Husbandry and Dairying",
+        "scraped_at": "2025-07-09 04:45:58",
+        "source": "MyScheme Portal"
+    },
+    {
+        "title": "RKVY SoilHealthand Fertility - SoilHealthCard",
+        "link": "https://www.myscheme.gov.in/schemes/rkvyshfshc",
+        "description": "Soil Health Card is designed to give each farmer soil nutrient status of his/her holding and advice him/her on the dosage of fertilizers and also the needed soil amendments, that s/he should apply to maintain soil health in the long run.",
+        "ministry": "Ministry Of Agriculture and Farmers Welfare",
+        "scraped_at": "2025-07-09 04:45:58",
+        "source": "MyScheme Portal"
+    },
+    {
+        "title": "SpecialHealthScheme for Primitive Tribes",
+        "link": "https://www.myscheme.gov.in/schemes/shspt",
+        "description": "The \"Special Health Scheme for Primitive Tribes\" scheme by the Welfare Department, Government of Jharkhand, aims to improve health care services for primitive tribal communities. Financial assistance of ₹38,41,632 is provided for targeted health care benefits.",
+        "ministry": "Jharkhand",
+        "scraped_at": "2025-07-09 04:45:58",
+        "source": "MyScheme Portal"
+    },
+    {
+        "title": "Rural Sports andHealthPromotion Scheme",
+        "link": "https://www.myscheme.gov.in/schemes/rsahps",
+        "description": "The scheme promotes fitness among rural youth by providing financial assistance to the mangal dals for setting up open gyms in each Gram Panchayat.",
+        "ministry": "Uttarakhand",
+        "scraped_at": "2025-07-09 04:45:58",
+        "source": "MyScheme Portal"
+    },
+    {
+        "title": "Tripura JournalistHealthInsurance Scheme",
+        "link": "https://www.myscheme.gov.in/schemes/tjhis",
+        "description": "A Health Insurance Scheme by the Directorate of Information & Culture Affairs, for Journalists who are permanent residents of the state of Tripura. The applicant must be an accredited journalist by the state government or PIB. The age must be in between 21-65 years.",
+        "ministry": "Tripura",
+        "scraped_at": "2025-07-09 04:45:58",
+        "source": "MyScheme Portal"
+    },
+    {
+        "title": "Chief Minister’sHealthInsurance Scheme - Nagaland",
+        "link": "https://www.myscheme.gov.in/schemes/cmhisn",
+        "description": "Launched on 16th October 2022, the scheme \"Chief Minister Health Insurance Scheme (CMHIS)\" is a Public Health Insurance Scheme by the Health and Family Welfare Department, Government of Nagaland. This scheme provides cashless treatment up to ₹20 lakhs for employees and pensioners and ₹5 lakhs.",
+        "ministry": "Nagaland",
+        "scraped_at": "2025-07-09 04:45:58",
+        "source": "MyScheme Portal"
+    },
+    {
+        "title": "Andaman & Nicobar Islands Scheme forHealthInsurance",
+        "link": "https://www.myscheme.gov.in/schemes/anishi",
+        "description": "The Health Insurance (ANISHI) shall provide cashless treatment upto Rupees 5 Lakhs per patients per illness which include indoor and outdoor treatments.",
+        "ministry": "Andaman and Nicobar Islands",
+        "scraped_at": "2025-07-09 04:45:58",
+        "source": "MyScheme Portal"
+    }
+]

@@ -1,0 +1,24 @@
+{
+    "generated_at": "2025-07-09 04:45:59",
+    "total_records": 45,
+    "sources": {
+        "Microsoft Research Blog": 35,
+        "MyScheme Portal": 10
+    },
+    "challenges": {
+        "Microsoft Research Blog": [
+            "Dynamic content loading (Load More button)",
+            "Complex HTML structure with nested divs",
+            "No significant anti-bot mechanisms detected"
+        ],
+        "MyScheme Portal": [
+            "Pagination handling",
+            "Relative URLs that need to be converted to absolute",
+            "No significant anti-bot mechanisms detected"
+        ]
+    },
+    "data_completeness": {
+        "Microsoft Research Blog": "High - All expected fields were captured",
+        "MyScheme Portal": "High - All expected fields were captured"
+    }
+}

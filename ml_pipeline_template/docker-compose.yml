@@ -1,0 +1,92 @@
+version: "3.8"
+
+services:
+  # ML Pipeline Services
+  spark:
+    image: bitnami/spark:3.5
+    volumes:
+      - ./ml_pipeline/data:/data
+      - ./ml_pipeline/scripts:/scripts
+    networks:
+      - ml-network
+
+  airflow:
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    command: standalone
+    volumes:
+      - ./ml_pipeline/dags:/opt/airflow/dags
+      - ./ml_pipeline/data:/data
+      - ./ml_pipeline/scripts:/scripts
+      - ./mlflow:/mlflow  # ✅ For MLflow artifact access
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+      - MLFLOW_ARTIFACT_URI=/mlflow
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+    networks:
+      - ml-network
+
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=airflow
+    networks:
+      - ml-network
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.12.1
+    command: >
+      mlflow server
+      --backend-store-uri sqlite:///mlflow.db
+      --default-artifact-root /mlflow
+      --host 0.0.0.0
+      --port 5000
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlflow:/mlflow  # ✅ Shared with all services needing model files
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+      - MLFLOW_ARTIFACT_ROOT=/mlflow
+    networks:
+      - ml-network
+
+  model_service:
+    build:
+      context: ./ml_pipeline/model_service
+    ports:
+      - "8000:8000"
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+    depends_on:
+      - mlflow
+    volumes:
+      - ./mlflow:/mlflow  # ✅ Added shared artifact volume
+    networks:
+      - ml-network
+
+  # RAG Pipeline Services
+  rag_service:
+    build:
+      context: ./rag_pipeline/app
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./rag_pipeline/docs:/docs
+      - ./rag_pipeline/embeddings:/embeddings
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+    networks:
+      - ml-network
+
+networks:
+  ml-network:
+    driver: bridge

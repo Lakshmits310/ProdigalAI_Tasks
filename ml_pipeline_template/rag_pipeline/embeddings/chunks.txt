@@ -1,0 +1,23 @@
+Non-Maximum Suppression (NMS) in Object Detection:  Object detection models like YOLO, SSD, and Faster R-CNN often predict multiple bounding boxes for a single object. This redundancy needs to be filtered out to produce clean, precise outputs. This is where Non-Maximum Suppression (NMS) comes in — a simple yet crucial technique to refine detections. Non-Maximum Suppression Non-Maximum Suppression is a key step in object detection models to remove overlapping bounding boxes and keep only the most
+ confident ones. Non-Maximum Suppression is a post-processing algorithm used to select the best bounding box among overlapping candidates. It works by: 1. Sorting all boxes by their confidence scores. 2. Selecting the box with the highest score. 3. Removing boxes that have a high overlap (IoU) with the selected box. 4. Repeating the process until no boxes remain. This ensures only the most relevant detections are retained. Need for NMS When a model detects multiple bounding boxes for the same ob
+ject, NMS: • Removes redundant boxes • Keeps the one with the highest confidence score Non-Maximum Suppression (NMS) Procedure Given: • A list of bounding boxes: [[x1, y1, x2, y2], ...] • A list of confidence scores: [score1, score2, ...] • An IoU threshold (e.g., 0.5)  Step-by-Step Algorithm: 1. Sort Boxes by Confidence Score (Descending) o Start by sorting all the boxes based on their associated confidence scores in descending order. 
+ 2. Initialize an Empty List for Keeping Selected Boxes o s
+elected_boxes = [] 
+ 
+ 3. Iterate Through the Boxes: o Pick the box with the highest confidence score and add it to selected_boxes. 
+ 4. Compute IoU (Intersection over Union): o For the current highest-scoring box, calculate IoU with every other box. IoU formula: IoU=Area of Overlap/Area of Union  
+ 
+ 5. Suppress Overlapping Boxes: o Discard all boxes with IoU greater than the threshold with the current box (they overlap too much and are considered redundant). 
+ 6. Repeat: o Repeat the above pro
+cess with the remaining boxes until none are left.  Standard NMS vs Soft-NMS Feature Standard NMS So.-NMS Suppression Hard removal of overlapping boxes Reduces score based on overlap Accuracy May miss close detec;ons Be=er at keeping near-overlapping boxes Use Case Faster, simple use cases More accurate in crowded scenes 
+      
+ NMS Algorithm 
+ Box 2 is suppressed because it has high overlap with box 1, and a lower confidence score.   
+ Visualizing NMS  • Before NMS: multiple overlapping boxes 
+• After NMS: only the highest scoring, least overlapping boxes remain 
+ Using NMS in Deep Learning Frameworks 
+  
+ Conclusion Non-Maximum Suppression is a cornerstone of object detection post-processing. Understanding its internals can help in: • Fine-tune object detectors • Optimize precision vs recall trade-offs • Debug overlapping detection issues Whether using a custom implementation or a framework’s built-in version, mastering Non-Maximum Suppression (NMS) is essential for building efficien
+t object detection pipelines. Reference [1] R. Girshick, J. Donahue, T. Darrell, and J. Malik, “Rich feature hierarchies for accurate object detection and semantic segmentation,” in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2014, pp. 580–587. [2] N. Bodla, B. Singh, R. Chellappa, and L. S. Davis, “Soft-NMS – Improving Object Detection With One Line of Code,” arXiv preprint arXiv:1704.04503, 2017. [Online]. Available: https://arxiv.org/abs/1704.04503 [3
+] TorchVision, “torchvision.ops.nms,” PyTorch Documentation. [Online]. Available: https://pytorch.org/vision/stable/ops.html#torchvision.ops.nms [4] TensorFlow, “tf.image.non_max_suppression,” TensorFlow API Documentation. [Online]. Available: https://www.tensorflow.org/api_docs/python/tf/image/non_max_suppression [5] S. Malik, “Non-Maximum Suppression: Theory and Implementation in Python,” LearnOpenCV, 2021. [Online]. Available: https://learnopencv.com/non-maximum-suppression-theory-and-impleme
+ntation-in-pythonnms/ [6] J. Hall, “What is Non-Maximum Suppression (NMS) in Object Detection?” Roboflow Blog, 2022. [Online]. Available: https://blog.roboflow.com/non-maximum-suppression/  

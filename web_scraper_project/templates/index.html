@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Web Scraper Dashboard</h1>
+        <div class="controls">
+            <button id="scrapeBtn">Run Scrapers</button>
+            <button id="loadDataBtn">Load Data</button>
+            <button id="downloadJson">Download JSON</button>
+            <button id="downloadCsv">Download CSV</button>
+            <button id="viewReport">View Report</button>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Microsoft Research</h3>
+                <p id="msCount">0 articles</p>
+            </div>
+            <div class="stat-card">
+                <h3>MyScheme Portal</h3>
+                <p id="schemeCount">0 schemes</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Records</h3>
+                <p id="totalCount">0</p>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <canvas id="dataChart"></canvas>
+        </div>
+        
+        <div class="report-section hidden" id="reportSection">
+            <h2>Scraping Report</h2>
+            <div id="reportContent"></div>
+        </div>
+        
+        <div class="data-table">
+            <h2>Scraped Data</h2>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Source</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Date/Ministry</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const scrapeBtn = document.getElementById('scrapeBtn');
+    const loadDataBtn = document.getElementById('loadDataBtn');
+    const downloadJson = document.getElementById('downloadJson');
+    const downloadCsv = document.getElementById('downloadCsv');
+    const viewReport = document.getElementById('viewReport');
+    const tableBody = document.getElementById('tableBody');
+    const reportSection = document.getElementById('reportSection');
+    const reportContent = document.getElementById('reportContent');
+
+    const ctx = document.getElementById('dataChart').getContext('2d');
+    const dataChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Microsoft Research', 'MyScheme Portal'],
+            datasets: [{
+                label: 'Number of Records',
+                data: [0, 0],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(255, 99, 132, 0.5)'
+                ],
+                borderColor: [
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: { y: { beginAtZero: true } }
+        }
+    });
+
+    scrapeBtn.addEventListener('click', async () => {
+        try {
+            const response = await fetch('/scrape');
+            const data = await response.json();
+            alert(data.message);
+            updateStats();
+        } catch (error) {
+            alert('Error during scraping: ' + error.message);
+        }
+    });
+
+    loadDataBtn.addEventListener('click', async () => {
+        try {
+            const response = await fetch('/data');
+            const data = await response.json();
+            if (data.error) {
+                alert(data.error);
+                return;
+            }
+
+            tableBody.innerHTML = '';
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.source || 'N/A'}</td>
+                    <td>${item.title || 'N/A'}</td>
+                    <td>${item.description?.slice(0, 100) || 'N/A'}...</td>
+                    <td>${item.date || item.ministry || 'N/A'}</td>
+                    <td>${item.link ? `<a href="${item.link}" target="_blank">View</a>` : 'N/A'}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+
+            updateStats();
+        } catch (error) {
+            alert('Error loading data: ' + error.message);
+        }
+    });
+
+    downloadJson.addEventListener('click', () => window.location.href = '/download/json');
+    downloadCsv.addEventListener('click', () => window.location.href = '/download/csv');
+
+    viewReport.addEventListener('click', async () => {
+        try {
+            const response = await fetch('/report');
+            const report = await response.json();
+
+            if (report.error) {
+                alert(report.error);
+                return;
+            }
+
+            let html = `
+                <p><strong>Generated at:</strong> ${report.generated_at}</p>
+                <p><strong>Total records:</strong> ${report.total_records}</p>
+                <h3>Sources</h3>
+                <ul>
+                    <li>Microsoft Research Blog: ${report.sources['Microsoft Research Blog']}</li>
+                    <li>MyScheme Portal: ${report.sources['MyScheme Portal']}</li>
+                </ul>
+                <h3>Challenges</h3>
+                <h4>Microsoft Research Blog</h4>
+                <ul>${report.challenges['Microsoft Research Blog'].map(item => `<li>${item}</li>`).join('')}</ul>
+                <h4>MyScheme Portal</h4>
+                <ul>${report.challenges['MyScheme Portal'].map(item => `<li>${item}</li>`).join('')}</ul>
+                <h3>Data Completeness</h3>
+                <ul>
+                    <li>Microsoft Research Blog: ${report.data_completeness['Microsoft Research Blog']}</li>
+                    <li>MyScheme Portal: ${report.data_completeness['MyScheme Portal']}</li>
+                </ul>
+            `;
+            reportContent.innerHTML = html;
+            reportSection.classList.remove('hidden');
+        } catch (error) {
+            alert('Error loading report: ' + error.message);
+        }
+    });
+
+    async function updateStats() {
+        try {
+            const response = await fetch('/data');
+            const data = await response.json();
+            if (data.error) return;
+
+            const msCount = data.filter(item => item.source === 'Microsoft Research Blog').length;
+            const schemeCount = data.filter(item => item.source === 'MyScheme Portal').length;
+
+            document.getElementById('msCount').textContent = `${msCount} articles`;
+            document.getElementById('schemeCount').textContent = `${schemeCount} schemes`;
+            document.getElementById('totalCount').textContent = msCount + schemeCount;
+
+            dataChart.data.datasets[0].data = [msCount, schemeCount];
+            dataChart.update();
+        } catch (error) {
+            console.error('Error updating stats:', error);
+        }
+    }
+});
+</script>
+
+</body>
+</html>

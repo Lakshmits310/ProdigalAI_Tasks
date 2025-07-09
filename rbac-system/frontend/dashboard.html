@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+  <div class="container">
+    <div class="d-flex justify-content-between">
+      <h2>Dashboard</h2>
+      <button class="btn btn-danger" onclick="logout()">Logout</button>
+    </div>
+
+    <div id="userInfo" class="my-3"></div>
+
+    <!-- Admin Section -->
+    <div id="adminSection" class="my-4" style="display: none;">
+      <h4>Admin: Create Organization</h4>
+      <input class="form-control mb-2" id="orgName" placeholder="Org name" />
+      <button class="btn btn-primary" onclick="createOrg()">Create Org</button>
+    </div>
+
+    <!-- Manager Section -->
+    <div id="managerSection" class="my-4" style="display: none;">
+      <h4>Manager/Admin: Create Department</h4>
+      <input class="form-control mb-2" id="orgId" placeholder="Org ID" />
+      <input class="form-control mb-2" id="deptName" placeholder="Department name" />
+      <button class="btn btn-primary" onclick="createDept()">Create Dept</button>
+    </div>
+
+    <!-- Contributor Section -->
+    <div id="contribSection" class="my-4" style="display: none;">
+      <h4>Contributor/Manager/Admin: Create Resource</h4>
+      <input class="form-control mb-2" id="deptId" placeholder="Dept ID" />
+      <input class="form-control mb-2" id="resTitle" placeholder="Resource title" />
+      <textarea class="form-control mb-2" id="resContent" placeholder="Content"></textarea>
+      <button class="btn btn-success" onclick="createResource()">Create Resource</button>
+      <div id="resourceResult" class="mt-3 text-success"></div>
+    </div>
+
+    <!-- Guest Link Section -->
+    <div id="guestLinkSection" class="my-4" style="display: none;">
+      <h4>Manager/Admin: Generate Guest Link</h4>
+      <input class="form-control mb-2" id="resId" placeholder="Resource ID" />
+      <select class="form-control mb-2" id="permission">
+        <option value="view">View</option>
+        <option value="edit">Edit</option>
+      </select>
+      <input class="form-control mb-2" id="days" placeholder="Expires in days" />
+      <button class="btn btn-warning" onclick="generateLink()">Generate Link</button>
+      <div id="guestLinkResult" class="mt-3 text-primary"></div>
+    </div>
+
+    <!-- Viewer Section -->
+    <div id="viewerSection" class="my-4" style="display: none;">
+      <h4>Viewer: View Department Resources</h4>
+      <input class="form-control mb-2" id="viewDeptId" placeholder="Enter Department ID" />
+      <button class="btn btn-info" onclick="fetchResources()">Get Resources</button>
+      <ul id="resourceList" class="mt-3 list-group"></ul>
+    </div>
+  </div>
+
+  <script>
+    const token = localStorage.getItem("token");
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (!token || !user) {
+      window.location.href = "login.html";
+    }
+
+    const role = user.role?.toLowerCase();
+    console.log("Logged-in user:", user);
+
+    document.getElementById("userInfo").innerHTML = `
+      <strong>Name:</strong> ${user.name}<br>
+      <strong>Email:</strong> ${user.email}<br>
+      <strong>Role:</strong> ${user.role}
+    `;
+
+    // Role-based visibility
+    if (role === "admin") {
+      document.getElementById("adminSection").style.display = "block";
+      document.getElementById("managerSection").style.display = "block";
+      document.getElementById("contribSection").style.display = "block";
+      document.getElementById("guestLinkSection").style.display = "block";
+    } else if (role === "manager") {
+      document.getElementById("managerSection").style.display = "block";
+      document.getElementById("contribSection").style.display = "block";
+      document.getElementById("guestLinkSection").style.display = "block";
+    } else if (role === "contributor") {
+      document.getElementById("contribSection").style.display = "block";
+    } else if (role === "viewer") {
+      document.getElementById("viewerSection").style.display = "block";
+    } else {
+      alert("Unknown role: " + role);
+    }
+
+    function logout() {
+      localStorage.clear();
+      window.location.href = "login.html";
+    }
+
+    async function createOrg() {
+      try {
+        const res = await fetch("http://127.0.0.1:5000/api/orgs/create", {
+          method: "POST",
+          headers: {
+            "Authorization": "Bearer " + token,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ name: orgName.value })
+        });
+        const data = await res.json();
+        alert(data.message || "Org created.");
+      } catch (err) {
+        alert("Failed to create org: " + err.message);
+      }
+    }
+
+    async function createDept() {
+      try {
+        const res = await fetch(`http://127.0.0.1:5000/api/orgs/${orgId.value}/departments`, {
+          method: "POST",
+          headers: {
+            "Authorization": "Bearer " + token,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ name: deptName.value })
+        });
+        const data = await res.json();
+        alert(data.message || "Department created.");
+      } catch (err) {
+        alert("Failed to create department: " + err.message);
+      }
+    }
+
+    async function createResource() {
+      try {
+        const res = await fetch(`http://127.0.0.1:5000/api/resources/${deptId.value}/create`, {
+          method: "POST",
+          headers: {
+            "Authorization": "Bearer " + token,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            title: resTitle.value,
+            content: resContent.value
+          })
+        });
+        const data = await res.json();
+        if (res.ok) {
+          document.getElementById("resourceResult").innerText = `${data.message} (ID: ${data.resource_id})`;
+          alert(`${data.message}\nResource ID: ${data.resource_id}`);
+        } else {
+          alert(data.message || "Resource creation failed");
+        }
+      } catch (err) {
+        alert("Failed to create resource: " + err.message);
+      }
+    }
+
+    async function generateLink() {
+      try {
+        const res = await fetch(`http://127.0.0.1:5000/api/resources/${resId.value}/share`, {
+          method: "POST",
+          headers: {
+            "Authorization": "Bearer " + token,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            permission: permission.value,
+            expires_in: parseInt(days.value)
+          })
+        });
+        const data = await res.json();
+        if (res.ok) {
+          document.getElementById("guestLinkResult").innerHTML =
+            `<strong>Guest Link:</strong> <a href="guest-view.html?token=${data.guest_url.split('/').pop()}" target="_blank">${data.guest_url}</a>`;
+        } else {
+          alert(data.message || "Failed to generate guest link.");
+        }
+      } catch (err) {
+        alert("Failed to generate link: " + err.message);
+      }
+    }
+
+    async function fetchResources() {
+      try {
+        const deptId = document.getElementById("viewDeptId").value;
+        const res = await fetch(`http://127.0.0.1:5000/api/resources/department/${deptId}`, {
+          headers: {
+            "Authorization": "Bearer " + token
+          }
+        });
+        const data = await res.json();
+        const list = document.getElementById("resourceList");
+        list.innerHTML = "";
+
+        if (Array.isArray(data) && data.length > 0) {
+          data.forEach(item => {
+            const li = document.createElement("li");
+            li.className = "list-group-item";
+            li.innerHTML = `<strong>${item.title}</strong><br>${item.content}`;
+            list.appendChild(li);
+          });
+        } else {
+          list.innerHTML = `<li class="list-group-item text-danger">No resources found.</li>`;
+        }
+      } catch (err) {
+        alert("Error fetching resources: " + err.message);
+      }
+    }
+  </script>
+</body>
+</html>

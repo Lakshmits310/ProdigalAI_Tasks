@@ -1,0 +1,23 @@
+          ┌──────────────────────┐
+          │  Load Test Script    │
+          │ (10,000+ req/min)    │
+          └────────┬─────────────┘
+                   │
+        HTTP POST  │
+                   ▼
+         ┌────────────────────┐
+         │  Flask API Server  │
+         │  (/register_event) │
+         └────────┬───────────┘
+                  │  Produces event
+                  ▼
+         ┌────────────────────┐
+         │  Kafka Topic:      │
+         │     'events'       │
+         └────────┬───────────┘
+                  │  Subscribed by
+                  ▼
+         ┌────────────────────┐
+         │ Kafka Consumer(s)  │◄─── Can scale horizontally
+         │  (Logs events)     │
+         └────────────────────┘

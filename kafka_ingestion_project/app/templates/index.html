@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register Event</title>
+</head>
+<body>
+  <h1>Register an Event</h1>
+
+  <form id="eventForm">
+    <!-- ID -->
+    <label for="id">Your ID:</label><br>
+    <input type="text" id="id" placeholder="Eg: 1001" required><br><br>
+
+    <!-- Name -->
+    <label for="name">Your Name:</label><br>
+    <input type="text" id="name" placeholder="Eg: Lakshmi T S" required><br><br>
+
+    <!-- Action -->
+    <label for="action">Select an Action:</label><br>
+    <select id="action" required>
+      <option value="">--Choose an action--</option>
+      <option value="logged in">Logged In</option>
+      <option value="logged out">Logged Out</option>
+      <option value="played music">Played Music</option>
+      <option value="paused video">Paused Video</option>
+      <option value="submitted feedback">Submitted Feedback</option>
+    </select><br><br>
+
+    <!-- Notes -->
+    <label for="notes">Notes (optional):</label><br>
+    <textarea id="notes" rows="3" cols="40" placeholder="Eg: phone hung, page didn't load..."></textarea><br><br>
+
+    <!-- Submit -->
+    <button type="submit">Submit Event</button>
+  </form>
+
+  <p id="resultText" style="font-weight: bold;"></p>
+
+  <script>
+    document.getElementById("eventForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const data = {
+        id: document.getElementById("id").value,
+        name: document.getElementById("name").value,
+        action: document.getElementById("action").value,
+        notes: document.getElementById("notes").value,
+        timestamp: new Date().toISOString()
+      };
+
+      const response = await fetch("/register_event", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+      const resultText = document.getElementById("resultText");
+      resultText.innerText = result.status || result.error;
+      resultText.style.color = result.status ? "green" : "red";
+    });
+  </script>
+</body>
+</html>
