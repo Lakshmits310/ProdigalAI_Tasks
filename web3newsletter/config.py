@@ -1,5 +1,5 @@
-TELEGRAM_TOKEN = "7449630385:AAH2yx-BjBNyeqPnfQCSzyX4gMagpIpmPYA"
-TELEGRAM_CHAT_ID = -1002721778352
+TELEGRAM_TOKEN = "your-token"
+TELEGRAM_CHAT_ID =your chat id
 
 PUBLICATIONS = {
     "CoinDesk": "https://www.coindesk.com",
